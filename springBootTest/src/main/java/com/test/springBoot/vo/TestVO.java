@@ -1,6 +1,6 @@
 package com.test.springBoot.vo;
 
-public class testVO {
+public class TestVO {
 	
 	public String id;
 	
