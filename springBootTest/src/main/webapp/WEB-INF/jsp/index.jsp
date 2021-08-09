@@ -13,7 +13,16 @@
 	
 </script>
 <body>
-   
+<form action="/member" name="form">
+  id	<input type="text" name="id" id="id">
+  pw	<input type="text" name="pw" id="pw">
+  name	<input type="text" name="name" id="name">
+  email	<input type="email" name="email" id="email">
+  tel	<input type="email" name="tel" id="tel">
+  email <input type="email" name="email" id="email">
+  author<input type="text" name="1" id="1">
+		<button type=submit>submit</button>	
+</form>
 
 </body>
 </html> 

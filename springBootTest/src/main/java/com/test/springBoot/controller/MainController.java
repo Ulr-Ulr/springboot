@@ -3,6 +3,7 @@ package com.test.springBoot.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -39,12 +40,12 @@ public class MainController {
 		
 		MemberVO memberVo= new MemberVO();
 		
-		memberVo.setId("1");
-		memberVo.setPw("2");
-		memberVo.setName("3");
-		memberVo.setEmail("4");
-		memberVo.setTel("5");
-		memberVo.setAuthor(6);
+		memberVo.setId("아이디");
+		memberVo.setPw("비밀번호");
+		memberVo.setName("이름");
+		memberVo.setEmail("이메일");
+		memberVo.setTel("번호");
+		memberVo.setAuthor(1);
 		
 		ObjectMapper mapper = new ObjectMapper();
 		
@@ -54,4 +55,5 @@ public class MainController {
 		
 		return memberVo;
 	}
+
 }
