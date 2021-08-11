@@ -12,4 +12,6 @@ public interface Member2DAO {
 	public List<Member2VO> selectAllMembers();
 	
 	public Member2VO findId(String id);
+
+	public void insertMember(Member2VO vo);
 }

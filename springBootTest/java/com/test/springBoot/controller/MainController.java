@@ -36,7 +36,7 @@ public class MainController {
 	
 	//전체검색
 	@GetMapping("/members")
-	public @ResponseBody List<Member2VO> selectListMembers() {
+	public @ResponseBody List<Member2VO> selectListMembers() throws Exception {
 		List<Member2VO> allMembers = member2Service.selectAllMembers();
 		log.info(allMembers.toString());
 		return allMembers;
@@ -44,10 +44,18 @@ public class MainController {
 	//아이디 검색해서 뽑아오기
 	@ResponseBody
 	@RequestMapping("/members/{id}")
-	public Member2VO findById(@PathVariable String id) {
-		log.info(dao2.findId(id).toString());
-		return dao2.findId(id);
+	public Member2VO findById(@PathVariable String id) throws Exception {
+		log.info(member2Service.findId(id).toString());
+		//return dao2.findId(id);
+		return member2Service.findId(id);
 	}
+	//post 아이디 입력
+	@ResponseBody
+	@PostMapping("/members")
+	public void insertMember(@RequestBody Member2VO vo) throws Exception {
+		member2Service.insertMember(vo);
+	}
+	
 	
 	@ResponseBody
 	@GetMapping("/member")

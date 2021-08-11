@@ -18,7 +18,11 @@ public class Member2Service {
 		return member2Dao.selectAllMembers();
 	}
 	//id검색해서 보기
-	public Member2VO findId() {
-		return member2Dao.findId();
+	public Member2VO findId(String id) throws Exception{
+		return member2Dao.findId(id);
+	}
+	//insert
+	public void insertMember(Member2VO vo) {
+		member2Dao.insertMember(vo);
 	}
 }
